@@ -1,0 +1,17 @@
+---
+- name: Templates playbook
+  gather_facts: no
+  hosts: all
+  become: no
+
+  tasks:
+
+    - name: <task name>
+      <module>: <arguments>
+      notify:
+        - <handler name>
+
+  handlers:
+
+    - name: <handler name>
+      <module>: <arguments>

@@ -1,0 +1,40 @@
+<div data-template="runner-viewer" class="row">
+    <div class="col-12">
+        <h4>New job</h4>
+        <ul id="job_tabs" class="nav nav-tabs">
+            <li class="nav-item">
+                <a class="nav-link active" data-toggle="tab" href="#playbook_tab">Playbooks</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" data-toggle="tab" href="#task_tab">Tasks</a>
+            </li>
+        </ul>
+        <div class="canvas tab-content card shadow p-3 mt-2">
+            <div class="tab-pane active" id="playbook_tab">
+                <div class="row">
+                    <div class="col-6">
+                        <div class="playbook-selector-container">
+                            <label>Select playbook</label>
+                            <div class="input-group">
+                                <select class="playbook-selector select form-control form-control-sm" title="Select playbook"></select>
+                                <div class="input-group-append">
+                                    <button class="playbook-edit-button btn btn-sm btn-light" title="Edit" type="button">
+                                        <i data-replace="edit-icon"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row mt-2">
+                    <div class="col-6">
+                        <div class="playbook-args-container mt-3"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="tab-pane task-table-container" id="task_tab"></div>
+        </div>
+    </div>
+</div>
+
+

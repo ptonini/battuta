@@ -1,0 +1,481 @@
+:root {
+    --main-bkg-color: whitesmoke;
+    --main-font-color: dimgrey;
+    --main-text-shadow: 0 0 1px rgba(0,0,0,0.11), 0 1px 1px rgba(0,0,0,0.11);
+
+    --container-bkg-color: white;
+    --scrollbar-thumb-color: #cbcbcb;
+
+    --btn-icon-hover-color: #e6e6e6;
+    --btn-icon-focus-border-color: #f3f3f3;
+
+    --btn-checked-color: #cdcdcd;
+    --input-border-color: #ced4da;
+}
+
+body {
+    font-size: small;
+    background-color: var(--main-bkg-color);
+    color: var(--main-font-color);
+}
+
+/* Text highlighting *****************/
+
+body {
+    user-select: none;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;;
+}
+
+h4 {
+    user-select: text !important;
+    -webkit-touch-callout: default !important;
+    -webkit-user-select: text !important;
+    -moz-user-select: text !important;
+    -ms-user-select: text !important;
+}
+
+
+/* Fonts *****************************/
+
+@font-face {
+    font-family: Headers;
+    src: url(/static/fonts/Kanit-Regular.ttf)
+}
+
+@font-face {
+    font-family: Elements;
+    src: url(/static/fonts/Assistant-Regular.ttf)
+}
+
+input, textarea, select, option, td,
+button.btn,
+div.dynagrid-item,
+div.form-group input,
+div.item-value,
+div.ui-menu-item-wrapper,
+div.jsonview li,
+.ui-widget input {
+    font-family: "Elements", sans-serif !important;
+}
+
+h3, h4, h5, h6, label, th, a, li,
+div.navbar,
+div.dataTables_info,
+div.task-table-header,
+div.item-label,
+#runner_status {
+    font-family: "Headers", sans-serif !important;
+    text-shadow: var(--main-text-shadow);
+    user-select: none;
+}
+
+.title-header:first-letter {
+    text-transform: capitalize;
+}
+
+button.toggle-config-button {
+    color: var(--main-font-color);
+    font-family: "Headers", sans-serif !important;
+    font-size: smaller;
+}
+
+div.jsonview li {
+    color: var(--main-font-color);
+    text-shadow: none;
+}
+
+/* FontAwesome icons ******************/
+
+button .fas, button .far, button .fal, button .fab,
+div.input-group-btn.input-group-append > div > span {
+    color: var(--main-font-color);
+}
+
+
+/* Pattern editor *********************/
+
+a.pattern-tab.nav-link.active {
+    background-color: var(--container-bkg-color) !important;
+    border-bottom-color:  var(--container-bkg-color) !important;
+}
+
+div.pattern-dropdown {
+    font-size: .875rem !important;
+}
+
+div.pattern-dropdown div.dropdown-menu {
+    position: absolute !important;
+    z-index: 1000;
+}
+
+div.pattern-dropdown span.dropdown-item {
+    font-size: smaller;
+    cursor: pointer;
+}
+
+div.pattern-dropdown span.dropdown-toggle::after {
+     content: none;
+}
+
+
+/* Tabs  *****************************/
+
+ul.nav-tabs a.nav-link.active {
+    background-color: var(--main-bkg-color);
+    border-bottom-color: var(--main-bkg-color);
+}
+
+
+/* Inputs ****************************/
+
+label {
+    margin-bottom: 0;
+}
+
+input, textarea, select {
+    font-size: small;
+}
+
+select.form-control:focus,
+textarea.form-control:focus,
+input.form-control:focus,
+div.kv-fileinput-caption:focus{
+    box-shadow: none;
+    border: 1px solid var(--input-border-color);
+}
+
+input.form-control[readonly] {
+    background-color: transparent;
+    cursor: inherit;
+}
+
+textarea {
+    resize: vertical
+}
+
+input.form-check-input {
+    margin-top: 3px
+}
+
+div.form-check {
+    margin-bottom: 5px
+}
+
+
+/* Anchors ***************************/
+
+a, a:focus, a:hover {
+    outline: none;
+    text-decoration: none;
+    color: var(--main-font-color) !important
+}
+
+
+/* Buttons ***************************/
+
+.btn-light,
+.btn-light:disabled {
+    border: 1px solid var(--input-border-color);
+    background-color: transparent
+}
+
+.btn-light:focus {box-shadow: none}
+
+
+/* Icon buttons **********************/
+
+button.btn-icon {
+    padding: 1px 5px;
+    border: transparent;
+    background-color: transparent;
+}
+
+button.btn-icon:focus {
+    outline: 0;
+    box-shadow: 0 0 0 1px var(--btn-icon-focus-border-color);
+}
+
+button.btn-icon:hover {
+    background-color: var(--btn-icon-hover-color)
+}
+
+button.btn-icon:disabled {
+    border: none;
+    background-color: transparent;
+}
+
+
+/* Navbar options ********************/
+
+nav.navbar {
+    border-radius: 0;
+    margin-bottom: 15px;
+    border-color: transparent;
+    box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.14), 0 1px 14px 0 rgba(0, 0, 0, 0.12), 0 3px 5px -1px rgba(0, 0, 0, 0.2);
+    background-color: var(--container-bkg-color);
+}
+
+nav.navbar a.navbar-brand {
+    font-size: 1.25rem
+}
+
+nav.navbar a.nav-link {
+    font-size: .875rem;
+}
+
+nav.navbar a.dropdown-item {
+    font-size: small
+}
+
+nav.navbar a.dropdown-item:active {
+    background-color: var(--btn-checked-color);
+}
+
+
+/* Inset container *******************/
+
+.inset-container {
+    overflow-x: hidden;
+    padding: 10px;
+    box-shadow: inset 1px 1px 3px 0 rgba(0,0,0,0.3);
+    border-radius: 2px;
+}
+
+
+/* Scrollbar ***************/
+
+div.scrollbar {
+    scroll-padding-top: 15px;
+    overflow-y: scroll;
+}
+
+div.scrollbar::-webkit-scrollbar {
+    width: 8px;
+    background-color: transparent;
+}
+
+div.scrollbar::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+    background-color: var(--scrollbar-thumb-color);
+}
+
+
+/* Alert box *************************/
+
+div.alert-container {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    z-index: 9999999999999;
+}
+
+div.alert {
+    box-shadow: 0 0 20px #888888;
+}
+
+div.alert div.button-container span {
+    cursor: pointer
+}
+
+div.message-container {
+    /*white-space: pre-wrap;*/
+    font-size: larger
+}
+
+/* File manager path container *******/
+
+ol.breadcrumb {
+    padding: 8px;
+}
+
+li.breadcrumb-item {
+    cursor: pointer
+}
+
+button.edit-path-button {
+    position:absolute;
+    right:1rem;
+    top:35%;
+    transform:translateY(-50%);
+    margin-right: 8px;
+}
+
+input.path-input {
+    padding: 0;
+    color: var(--main-font-color) !important;
+    border: 0 solid var(--input-border-color);
+}
+
+
+/* JQuery dialog *************************/
+
+.ui-dialog {
+    box-shadow: 0 0 20px #888888;
+    border-radius: 5px
+}
+
+.ui-dialog-titlebar-close,
+.ui-dialog-titlebar  {
+    display: none
+}
+
+.ui-dialog-content {
+    padding: 15px !important;
+    overflow-x: hidden !important;
+    border: none
+}
+
+
+/* JQuery widgets *************************/
+
+.ui-widget-overlay {
+    background: white;
+    opacity: 0
+}
+
+.ui-widget-content {
+    color: var(--main-font-color)
+}
+
+.ui-widget input.form-control,
+.ui-widget select.form-control,
+.ui-widget textarea.form-control,
+.ui-widget button.btn {
+    font-size: 1rem
+}
+
+.ui-widget input.form-control-sm,
+.ui-widget select.form-control-sm,
+.ui-widget textarea.form-control-sm,
+.ui-widget button.btn-sm {
+    font-size: 0.875rem
+}
+
+.ui-autocomplete {
+    z-index: 999;
+    max-height: 300px;
+    overflow-y: auto;
+    overflow-x: hidden
+}
+
+
+/* DataTables options ****************/
+
+table.dataTable {
+    border-collapse: collapse !important;
+    table-layout: fixed;
+    word-wrap:break-word;
+}
+
+table.dataTable thead th,
+table.dataTable tbody {
+    color: var(--main-font-color);
+}
+
+table.dataTable thead th,
+table.dataTable tbody td{
+    border: none;
+    padding-top: 6px;
+    padding-bottom: 6px;
+    line-height: 23px;
+}
+
+table.dataTable tbody td {
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+table.dataTable tr.child_row,
+table.dataTable tr.child_row:hover {
+    background-color: transparent;
+}
+
+table.dataTable tr.child_row div.well {
+    background-color: var(--main-bkg-color);
+}
+
+div.dataTables_length select {
+    font-size: 90%;
+}
+
+div.dataTables_filter {
+    float: right;
+    text-align: right;
+}
+
+div.dataTables_wrapper div.dataTables_filter input {
+    margin-left: 8px;
+}
+
+div.dataTables_scrollBody {
+    border-bottom: 2px solid lightgrey;
+    border-top: 2px solid lightgrey
+}
+
+div.dataTables_scrollBody::-webkit-scrollbar {
+    width: 8px;
+    background-color: transparent;
+}
+
+div.dataTables_scrollBody::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+    background-color: var(--scrollbar-thumb-color);
+}
+
+div.dataTables_paginate  {
+    float: right
+}
+
+div.dataTables_paginate a.page-link {
+    padding: 6px 12px;
+}
+
+div.dataTables_paginate li.page-item.active a.page-link {
+     background-color: var(--btn-checked-color);
+     border: 1px solid #dee2e6;
+}
+
+div.dataTables_paginate a.page-link:focus,
+div.dataTables_paginate a.page-link:hover {
+    border: 1px solid #dee2e6;
+    box-shadow: none;
+}
+
+
+/* Checked button ********************/
+
+.checked-button,
+.checked-button:focus,
+.checked-button:hover {
+    background-color: var(--btn-checked-color) !important
+}
+
+/* Relation grid *********************/
+
+.relation-grid-item {
+    display: flex;
+    min-width: 0
+}
+
+.pointer:hover {
+    cursor: pointer;
+}
+
+.truncate {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: block;
+}
+
+/* */
+
+div.play-container:last-of-type {
+    margin-bottom: .5rem !important;
+}

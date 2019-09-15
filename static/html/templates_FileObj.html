@@ -1,0 +1,69 @@
+<div data-template="file-selector">
+    <h4 data-bind="label.collective" class="title-header"></h4>
+    <div class="canvas card shadow p-3">
+        <div class="row">
+            <div class="col-12">
+                <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb path-breadcrumbs">
+                        <li class="breadcrumb-item root-breadcrumb">&nbsp;</li>
+                    </ol>
+                    <button class="btn btn-icon edit-path-button" type="button" title="Edit path">
+                        <i data-replace="edit-icon"></i>
+                    </button>
+                </nav>
+            </div>
+            <div class="col-12 file-table-container"></div>
+        </div>
+    </div>
+</div>
+
+<form data-template="file-editor-form">
+    <div class="row form-group">
+        <div class="col-6">
+            <label>File name</label>
+            <input data-bind="new_name" class="filename-input form-control form-control-sm" title="File name" type="text">
+        </div>
+        <div class="col-2 offset-4">
+            <label>Mode</label>
+            <select class="select mode-selector form-control form-control-sm" title="Mode"></select>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col editor_column">
+            <div class="editor-container" contenteditable="true" style="border: 1px solid lightgrey"></div>
+        </div>
+    </div>
+</form>
+
+<form data-template="update-file-form">
+    <input class="filename-input form-control form-control-sm" title="Enter name" type="text">
+</form>
+
+<form data-template="upload-file-form">
+    <input class="input-file" title="Select file" type="file">
+</form>
+
+<form data-template="create-file-form">
+    <div class="input-group">
+        <input class="filename-input form-control form-control-sm" title="Enter name" type="text">
+        <div class="input-group-append">
+            <button class="folder-button btn btn-light btn-sm" type="button" title="Folder">
+                <span class="fas fa-folder"></span>
+            </button>
+        </div>
+    </div>
+</form>
+
+<table>
+    <tr data-template="previous-folder-row">
+        <td class="pointer font-weight-bold previous-folder-link">..</td><td></td><td></td><td></td><td></td>
+    </tr>
+</table>
+
+<input data-template="path-input" class="path-input rounded px-1" title="Enter path">
+
+<li data-template="path-breadcrumb" class="breadcrumb-item path-breadcrumb"></li>
+
+
+
+

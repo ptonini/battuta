@@ -1,0 +1,91 @@
+<div data-template="node-selector" class="row">
+    <div class="col-md-12">
+        <h4 data-bind="label.collective" class="title-header"></h4>
+        <ul class="nav nav-tabs">
+            <li class="nav-item">
+                <a class="nav-link active" data-toggle="tab" href="#table_tab">
+                    <span class="fas fa-fw fa-list"></span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a  class="nav-link" data-toggle="tab" href="#grid_tab">
+                    <span class="fas fa-fw fa-th"></span>
+                </a>
+            </li>
+        </ul>
+        <div class="canvas tab-content card shadow p-3 mt-2">
+            <div class="node-table-container tab-pane mb-2 in active" id="table_tab"></div>
+            <div class="node-grid-container tab-pane mb-2" id="grid_tab">
+                <div id="node_grid"></div>
+            </div>
+            <div class="tab-footer">
+                <i data-replace="download-button" data-title="Export to CSV"></i>
+                <i data-replace="facts-button"></i>
+                <i data-replace="delete-button" data-title="Delete nodes"></i>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div data-template="host-info" class="row mt-4">
+    <div class="col-5">
+        <div class="row no-gutters">
+            <div class="col-4 item-label">Full hostname:</div>
+            <div data-bind="facts.fqdn" class="col-8 item-value font-weight-bold text-truncate"></div>
+            <div class="col-4 item-label">Processor:</div>
+            <div class="col-8 item-value font-weight-bold text-truncate">
+                <span data-bind="facts.processor.2"></span>&nbsp;
+            </div>
+            <div class="col-4 item-label">Cores:</div>
+            <div data-bind="facts.processor_cores" class="col-8 item-value font-weight-bold text-truncate"></div>
+            <div class="col-4 item-label">RAM Memory</div>
+            <div data-bind="facts.memtotal_mb" class="col-8 item-value font-weight-bold text-truncate"></div>
+            <div class="col-4 item-label">System:</div>
+            <div data-bind="facts.system" class="col-8 item-value font-weight-bold text-truncate"></div>
+            <div class="col-4 item-label">OS:</div>
+            <div class="col-8 item-value font-weight-bold text-truncate">
+                <span data-bind="facts.distribution"></span>&nbsp;<span data-bind="facts.distribution_version"></span>
+            </div>
+            <div class="col-4 item-label">Date</div>
+            <div class="col-8 item-value font-weight-bold text-truncate">
+                <span data-bind="facts.date_time.date"></span>&nbsp;<span data-bind="facts.date_time.time"></span>&nbsp;<span data-bind="facts.date_time.tz"></span>
+            </div>
+        </div>
+    </div>
+    <div class="col-5">
+        <div class="row no-gutters">
+            <div class="col-4 item-label">System vendor:</div>
+            <div data-bind="facts.system_vendor" class="col-8 item-value font-weight-bold text-truncate"></div>
+        </div>
+        <div class="row no-gutters">
+            <div class="col-4 item-label">Product name:</div>
+            <div data-bind="facts.product_name" class="col-8 item-value font-weight-bold text-truncate"></div>
+        </div>
+        <div class="row no-gutters">
+            <div class="col-4 item-label">Product serial:</div>
+            <div data-bind="facts.product_serial" class="col-8 item-value font-weight-bold text-truncate"></div>
+        </div>
+        <div class="row no-gutters">
+            <div class="col-4 item-label">Form factor:</div>
+            <div data-bind="facts.form_factor" class="col-8 item-value font-weight-bold text-truncate"></div>
+        </div>
+    </div>
+    <div class="col-12 mt-4">
+        <button class="networking-button btn btn-icon btn-sm" title="Network" type="button">
+            <span class="fas fa-fw fa-network-wired"></span>
+        </button>
+        <button class="storage-button btn btn-icon btn-sm" title="Storage" type="button">
+            <span class="fas fa-fw fa-hdd"></span>
+        </button>
+        <button class="show-facts-button btn btn-icon btn-sm" title="Facts" type="button">
+            <span class="fas fa-fw fa-clipboard"></span>
+        </button>
+        <i data-replace="facts-button"></i>
+    </div>
+</div>
+
+<form data-template="group-form" class="mt-4">
+    <button class="toggle-config-button btn btn-light btn-sm" data-bind="config" type="button">Configuration group</button>
+</form>
+
+<div data-template="facts-container" class="well inset-container scrollbar"></div>

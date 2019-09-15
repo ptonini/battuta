@@ -1,0 +1,347 @@
+<!-- Dialog elements-->
+
+<div data-template="dialog">
+    <h5 class="dialog-header"></h5>
+    <div class="dialog-content"></div>
+    <div class="dialog-footer text-right mt-3"></div>
+</div>
+
+<div data-template="alert" class="alert-container container">
+    <div class="alert">
+        <div class="row">
+            <div class="col-9 item-label message-container" style="font-size: larger"></div>
+            <div class="col-3 text-right button-container py-1"></div>
+        </div>
+    </div>
+</div>
+
+
+<!-- Icons -->
+
+<span data-template="close-icon" class="close-icon fas fa-fw fa-times" title="Close"></span>
+
+<span data-template="confirm-icon" class="confirm-icon fas fa-fw fa-check" title="Confirm"></span>
+
+<span data-template="save-icon" class="save-icon fas fa-fw fa-save" title="Save"></span>
+
+<span data-template="edit-icon" class="edit-icon fas fa-fw fa-pencil-alt" title="Edit"></span>
+
+<span data-template="delete-icon" class="delete-icon fas fa-fw fa-trash" title="Delete"></span>
+
+<span data-template="copy-icon" class="copy-icon fas fa-fw fa-clone" title="Copy"></span>
+
+<span data-template="remove-icon" class="remove-icon fas fa-fw fa-minus-circle" title="Remove"></span>
+
+<span data-template="add-icon" class="add-icon fas fa-fw fa-plus" title="Add"></span>
+
+<span data-template="create-icon" class="create-icon fas fa-fw fa-asterisk" title="Create"></span>
+
+<span data-template="upload-icon" class="upload-icon fas fa-fw fa-upload" title="Upload"></span>
+
+
+<!-- Icon Buttons -->
+
+<button data-template="close-button" class="close-button btn btn-icon btn-sm" title="Close" type="button">
+    <i data-replace="close-icon" data-title=""></i>
+</button>
+
+<button data-template="confirm-button" class="confirm-button btn btn-icon btn-sm" title="Confirm" type="button">
+    <i data-replace="confirm-icon" data-title=""></i>
+</button>
+
+<button data-template="save-button" class="save-button btn btn-icon btn-sm" title="Save" type="button">
+    <i data-replace="save-icon" data-title=""></i>
+</button>
+
+<button data-template="edit-button" class="edit-button btn btn-icon btn-sm" title="Edit" type="button">
+    <i data-replace="edit-icon" data-title=""></i>
+</button>
+
+<button data-template="delete-button" class="delete-button btn btn-icon btn-sm" title="Delete" type="button">
+    <i data-replace="delete-icon" data-title=""></i>
+</button>
+
+<button data-template="copy-button" class="copy-button btn btn-icon btn-sm" title="Copy" type="button">
+    <i data-replace="copy-icon" data-title=""></i>
+</button>
+
+<button data-template="run-button" class="run-button btn btn-icon btn-sm" title="Run" type="button">
+    <span class="fas fa-fw fa-cogs"></span>
+</button>
+
+<button data-template="download-button" class="download-button btn btn-icon btn-sm" title="Download" type="button">
+    <span class="fas fa-download"></span>
+</button>
+
+<button data-template="upload-button" class="upload-button btn btn-icon btn-sm" title="Upload" type="button">
+    <span class="fas fa-upload"></span>
+</button>
+
+
+<!-- Small icon buttons-->
+
+<button data-template="remove-button" class="remove-button btn btn-icon btn-sm" title="Remove" type="button">
+    <span class="fas fa-minus-circle"></span>
+</button>
+
+<button data-template="facts-button" class="facts-button btn btn-icon btn-sm" title="Get facts" type="button">
+    <span class="fas fa-fw fa-clipboard-list"></span>
+</button>
+
+
+<!-- Aggregated buttons -->
+
+<button data-template="pattern-editor-button" class="pattern-editor-button btn btn-sm btn-light" title="Build pattern" type="button">
+    <i data-replace="edit-icon" data-title=""></i>
+</button>
+
+
+<!-- Forms -->
+
+<form data-template="form"></form>
+
+<form data-template="entity-form">
+    <div class="form-group">
+        <label for="name-input">Name</label>
+        <input id="name-input" class="form-control form-control-sm" type="text" data-bind="name">
+    </div>
+    <div class="form-group">
+        <label for="description-input">Description</label>
+        <textarea id="description-input" class="textarea form-control form-control-sm" data-bind="description"></textarea>
+    </div>
+</form>
+
+<form data-template="pattern-form">
+    <div class="row">
+        <div class="col-6 mb-2">
+            <h5>Pattern editor</h5>
+        </div>
+        <div class="col-6 mb-2 text-right">
+            <a href="http://docs.ansible.com/ansible/intro_patterns.html" target="_blank">patterns reference</a>
+        </div>
+        <div class="col-12 form-group">
+            <div class="input-group">
+                <input class="pattern-input form-control form-control-sm" type="text" title="Pattern">
+                <div class="input-group-append">
+                    <button class="clear-button btn btn-light btn-sm" type="button" title="Clear">
+                        <span class="fas fa-fw fa-eraser"></span>
+                    </button>
+                    <button class="reload-button btn btn-light btn-sm" type="button" title="Reload">
+                        <span class="fas fa-fw fa-sync-alt"></span>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class="col-12">
+            <ul class="nav nav-tabs">
+                <li class="nav-item">
+                    <a class="nav-link pattern-tab active" data-toggle="tab" href="#host-tab">Hosts</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link pattern-tab" data-toggle="tab" href="#group-tab">Groups</a>
+                </li>
+            </ul>
+            <div class="tab-content mt-2">
+                <div class="tab-pane in active" id="host-tab">
+                    <div class="hosts-grid"></div>
+                </div>
+                <div class="tab-pane" id="group-tab">
+                    <div class="groups-grid"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</form>
+
+<form data-template="login-form" class="mt-5">
+    <div class="row">
+        <div class="col-12">
+            <h5>Login</h5>
+        </div>
+    </div>
+    <div class="row no-gutters">
+        <div class="col-2">
+            <input class="form-control form-control-sm mr-1 mb-2" type="text" placeholder="Username">
+        </div>
+    </div>
+    <div class="row no-gutters">
+        <div class="col-2">
+            <input class="form-control form-control-sm mr-1 mb-2" type="password" placeholder="Password">
+        </div>
+        <div class="col-1">
+            <button class="btn btn-link login-button" title="Login">
+                <span class="fas fa-fw fa-sign-in-alt"></span>
+            </button>
+        </div>
+    </div>
+</form>
+
+
+<!-- Views -->
+
+<div data-template="entity-viewer" class="row">
+    <div class="col">
+        <div class="d-flex align-items-center">
+            <h4>
+                <small data-bind="label.single"></small>
+                <span class="mr-3" data-bind="name"></span>
+            </h4>
+            <div class="button-container mb-2">
+                <i data-replace="edit-button"></i>
+                <i data-replace="delete-button"></i>
+            </div>
+        </div>
+        <ul class="nav nav-tabs">
+            <li class="nav-item">
+                <a class="nav-link active" data-toggle="tab" href="#info_tab">Info</a>
+            </li>
+        </ul>
+        <div class="canvas tab-content card shadow p-3 mt-2">
+            <div class="tab-pane active" id="info_tab">
+                <h5 class="description-header" data-bind="description"></h5>
+                <div id="info_container"></div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div data-template="search-viewer">
+    <h4>Search results for: <span class="pattern-container"></span></h4>
+    <div class="canvas result-container card shadow p-3 mt-2 scrollbar">
+        <div class="hosts-grid"></div>
+        <div class="groups-grid"></div>
+    </div>
+</div>
+
+
+<!-- Default selector -->
+
+<div data-template="entity-selector">
+    <h4 data-bind="label.collective" class="title-header"></h4>
+    <div class="canvas table-container card shadow p-3"></div>
+</div>
+
+
+<!-- Main NavBar -->
+
+<div data-template="main-navbar" class="container">
+    <a class="navbar-brand" href="/">Battuta</a>
+    <ul class="navbar-nav mr-auto">
+        <li class="nav-item dropdown">
+            <a id="inventory-menu" class="nav-link" href="#" data-toggle="dropdown">Inventory</a>
+            <div class="dropdown-menu" aria-labelledby="inventory-menu">
+                <a href='#' class="dropdown-item" data-route="hosts">Hosts</a>
+                <a href='#' class="dropdown-item" data-route="groups">Groups</a>
+                <a href='#' class="dropdown-item" data-route="manage">Manage inventory</a>
+            </div>
+        </li>
+        <li class="nav-item dropdown">
+            <a id="runner-menu" href="#" class="nav-link" data-toggle="dropdown">Runner</a>
+            <div class="dropdown-menu">
+                <a href='#' class="dropdown-item" data-route="runner">New job</a>
+                <a href='#' class="dropdown-item" data-route="jobs">History</a>
+            </div>
+        </li>
+        <li class="nav-item dropdown">
+            <a id="files-menu" href="#" class="nav-link" data-toggle="dropdown">Files</a>
+            <div class="dropdown-menu">
+                <a href="#" class="dropdown-item" data-route="repository">Repository</a>
+                <a href="#" class="dropdown-item" data-route="playbooks">Playbooks</a>
+                <a href="#" class="dropdown-item" data-route="roles">Roles</a>
+            </div>
+        </li>
+        <li class="nav-item">
+            <a href="#" class="nav-link" data-route="projects">Projects</a>
+        </li>
+        <li class="nav-item dropdown">
+            <a id="iam-menu" href="#" class="nav-link" data-toggle="dropdown">IAM</a>
+            <div class="dropdown-menu">
+                <a href="#" class="dropdown-item" data-route="users">Users</a>
+                <a href="#" class="dropdown-item" data-route="usergroups">Groups</a>
+            </div>
+        </li>
+    </ul>
+    <ul class="navbar-nav navbar-right mr-3">
+        <li class="nav-item">
+            <div class="input-group">
+                <input class="form-control form-control-sm search-input" type="text" title="Search">
+                <div class="input-group-append">
+                    <button class="btn btn-light btn-sm search-button" type="button">
+                        <span class="fas fa-fw fa-search"></span>
+                    </button>
+                </div>
+            </div>
+        </li>
+    </ul>
+    <ul class="navbar-nav navbar-right">
+        <li class="nav-item">
+            <a href="#" class="nav-link preferences-link" title="Preferences">
+                <span class="fas fa-fw fa-cog"></span>
+            </a>
+        </li>
+        <li class="nav-item dropdown">
+            <a href="#" class="nav-link" data-toggle="dropdown">
+                <span id="user_icon" class="fas fa-fw fa-user"></span>
+            </a>
+            <div class="dropdown-menu">
+                <a href="#" class="dropdown-item profile-link">Profile</a>
+                <a href="#" class="dropdown-item logout-link">Logout</a>
+            </div>
+        </li>
+    </ul>
+</div>
+
+
+<!-- Other elements -->
+
+<table data-template="table" class="table table-condensed table-hover table-striped"></table>
+
+<option data-template="select-option" value="new">new</option>
+
+<div data-template="pattern-dropdown" class="dropdown pattern-dropdown">
+    <span class="dropdown-toggle pointer truncate" data-toggle="dropdown"></span>
+    <div class="dropdown-menu">
+        <span class="dropdown-item">Select</span>
+        <span class="dropdown-item">And</span>
+        <span class="dropdown-item">Not</span>
+    </div>
+</div>
+
+<i data-template="no-description">No description available</i>
+
+<div data-template="tab-pane" class="tab-pane"></div>
+
+<li data-template="tab-link" class="nav-item">
+    <a class="nav-link" data-toggle="tab"></a>
+</li>
+
+
+<!-- Preferences dialog elements -->>
+
+<button data-template="restore-button" class="restore-button btn btn-icon float-right" title="Restore defaults" type="button">
+    <span class="fas fa-fw fa-undo-alt"></span>
+</button>
+
+<div data-template="prefs-header" class="row">
+    <div class="col"><h6></h6></div>
+</div>
+
+<div data-template="prefs-item-row" class="row mb-1">
+    <div class="col-4 d-flex align-items-center item-label"></div>
+    <div class="error-label text-danger"></div>
+</div>
+
+<div data-template="prefs-input-str" class="input-container col-5">
+    <input class="form-control form-control-sm item-input" type="text" title="">
+</div>
+
+<div data-template="prefs-input-bool" class="input-container col-2">
+    <select class="select form-control form-control-sm item-input" title="">
+        <option value="true">true</option>
+        <option value="false">false</option>
+    </select>
+</div>
+
+<div data-template="prefs-input-number" class="input-container col-2">
+    <input class="form-control form-control-sm item-input" type="text" title="">
+</div>
