@@ -33,8 +33,6 @@
     "font-awesome": "font-awsome#^5.4.1",
     "requirejs": "^2.3.5",
     "blockUI": "blockui#*",
-//    "Assistant": "https://google-fonts.azurewebsites.net/googleFonts/Assistant?family=Assistant",
-//    "Kanit": "https://google-fonts.azurewebsites.net/googleFonts/Kanit?family=Kanit",
     "popper.js": "^1.14.4",
     "yaml.js": "^0.3.0",
     "jquery.actual": "https://github.com/dreamerslab/jquery.actual.git#^1.0.19"
